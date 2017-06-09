@@ -1,0 +1,283 @@
+/* HTML NODES */
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* CLASSES */
+
+.clear-fix:after {
+    content: " ";
+    display: block;
+    clear: both;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.headshot {
+    height: 100%;
+}
+
+.button-container {
+    position: relative;
+    width: 66%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.click-box {
+    display: inline-block;
+    width: 120px;
+    color: black;
+    text-decoration: none;
+    margin: 10px 0px;
+    padding: 5px 10px;
+    border-radius: 2px;
+}
+
+.click-box:hover {
+    background-color: #111;
+    color: #fdfdfe;
+    cursor: pointer;
+}
+
+.media-button {
+    border: none;
+}
+
+.media-button.active {
+    border-bottom: 2px solid #111
+}
+
+.contact-link {
+    text-align: center;
+    color: black;
+    text-decoration: none;
+}
+
+.contact-link img {
+    padding: 0px 5px;
+    height: 2.4rem;
+}
+
+.media-container {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    padding: 0px 5px;
+    top: 0px;
+    left: 0px;
+    opacity: 0;
+    overflow: hidden;
+    overflow-y: auto;
+    text-align: center;
+    pointer-events: none;
+    visibility: hidden;
+    -webkit-transition: opacity 0.2s ease-out 0s, visibility 0s linear 0.3s;
+    transition: opacity 0.2s ease-out 0s, visibility 0s linear 0.3s;
+}
+
+.media-container.active {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    -webkit-transition: opacity 0.2s ease-out 0s, visibility 0s linear 0s;
+    transition: opacity 0.2s ease-out 0s, visibility 0s linear 0s;
+}
+
+.reel-wrapper {
+    width: 95%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.reel-wrapper .ratio {
+    display: block;
+    width: 100%;
+    height: auto;
+    opacity: 0;
+}
+
+.reel-wrapper iframe {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.reel-header {
+    font-size: 3rem;
+    width: 100%;
+    text-align: left;
+    line-height: 1;
+    margin-top: -3.5rem;
+}
+
+.link-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+/* IDs */
+
+#greeting {
+    font-size: 3.2rem;
+    margin: 0px;
+    padding: 0px 10px;
+    font-weight: 400;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+#mainButtons {
+    width: 100%;
+    position: relative;
+    text-align: center;
+    font-size: 2rem;
+}
+
+#contentContainer {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    background: #fdfdfe;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+#mediaContainer {
+    width: 60%;
+    height: 100%;
+    float: left;
+    overflow: hidden;
+    position: relative;
+}
+
+#textContainer {
+    width: 40%;
+    height: 100%;
+    float: left;
+    overflow: hidden;
+    position: relative;
+    background: #fdfdfe;
+}
+
+#textWrapper {
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 0px;
+    transform: translate(0px, -50%);
+}
+
+#contactLinks {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    z-index: 1;
+    width: 100%;
+    background: #fdfdfe;
+    text-align: center;
+    height: 4.2rem;
+}
+
+@media screen and (max-width: 1000px) {
+    #greeting {
+        float: left;
+        width: auto;
+        height: 100%;
+        margin: 0px;
+        padding: 0px 10px;
+        font-weight: 400;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+    #mediaContainer {
+        width: 100%;
+        height: 100%;
+        float: none;
+        text-align: center;
+    }
+    #textContainer {
+        width: 100%;
+        height: 50px;
+        float: none;
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        overflow: hidden;
+        -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1), 1px 1px 1px 0 rgba(0, 0, 0, 0.12);
+        -moz-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1), 1px 1px 1px 0 rgba(0, 0, 0, 0.12);
+        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1), 1px 1px 1px 0 rgba(0, 0, 0, 0.12);
+    }
+    #textWrapper {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        top: 0px;
+        left: 0px;
+        transform: none;
+    }
+    #contactLinks {
+        position: fixed;
+        z-index: 3;
+        -webkit-box-shadow: 0 -2px 2px 0 rgba(0, 0, 0, 0.1), 1px 1px 1px 0 rgba(0, 0, 0, 0.12);
+        -moz-box-shadow: 0 -2px 2px 0 rgba(0, 0, 0, 0.1), 1px 1px 1px 0 rgba(0, 0, 0, 0.12);
+        box-shadow: 0 -2px 2px 0 rgba(0, 0, 0, 0.1), 1px 1px 1px 0 rgba(0, 0, 0, 0.12);
+    }
+    .contact-link img {
+        height: 3.2rem;
+    }
+    .media-container {
+        padding-top: 51px;
+        padding-bottom: 44px;
+    }
+    .button-container {
+        width: auto;
+        float: right;
+        height: 100%;
+    }
+    .click-box {
+        height: 100%;
+        width: auto;
+        margin: 0px;
+        height: 50px;
+    }
+}
