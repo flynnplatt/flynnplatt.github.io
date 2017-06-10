@@ -1,0 +1,239 @@
+/* HTML NODES */
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: 400;
+    color: #333333;
+    background: #F6F6F6;
+}
+
+body {
+    text-align: center;
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+a {
+    text-decoration: none;
+    color: #333333;
+    letter-spacing: 0.5px;
+}
+
+a.active {
+    font-weight: 700;
+    color: #EB5757;
+}
+
+.my-name {
+    font-weight: 600;
+    font-size: 3.6rem;
+}
+
+.banner-image {
+    width: 100%;
+    height: 30rem;
+}
+
+
+.banner-image img {
+    width: 100%;
+    height: 100%;
+}
+
+.page-links {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    padding: 1.5rem;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+}
+
+.seperator {
+    margin: 0px 1rem;
+    vertical-align: center;
+}
+
+.links-left {
+    flex-grow: 1;
+    text-align: left;
+}
+
+.links-right {
+    flex-grow: 1;
+    text-align: right;
+}
+
+.media-buttons {
+    padding: 0px 15px;
+}
+
+.button {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    width: 100%;
+    height: 6rem;
+    border: 1px solid #333333;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    cursor: pointer;
+}
+
+.icon {
+    width: 3.2rem;
+    height: 3.2rem;
+    fill: #333333;
+    stroke: #333333;
+}
+
+.icon.play {
+    background: url("/images/icons/play.svg");
+}
+
+.icon.document {
+    background: url("/images/icons/document.svg");
+}
+
+.label {
+    font-size: 2.8rem;
+    margin-left: 1.5rem;
+}
+
+.image-gallery {
+    padding: 0px 15px;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.image-thumbnail {
+    border: 1px solid #333333;
+    width: 20rem;
+    height: 20rem;
+    margin: 0px 0px 0.75rem 0px;
+}
+
+.image-thumbnail.center {
+    margin: 0px 0.75rem 0.75rem 0.75rem;
+}
+
+.image-thumbnail.large {
+    width: 30rem;
+    height: 30rem;
+}
+
+.image-thumbnail.left {
+    margin: 0px 1.5rem 0.75rem 0px;
+}
+
+.image-thumbnail img {
+    width: 19.8rem;
+    height: : 19.8rem;
+}
+.image-thumbnail.large img {
+    width: 29.8rem;
+    height: : 29.8rem;
+}
+
+.reel-viewer {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+    visibility: none;
+    opacity: 0;
+    -webkit-transition: opacity 0.3s ease-out 0s, visibility 0s linear 0.4s, z-index 0s linear 0.4s;
+    -moz-transition: opacity 0.3s ease-out 0s, visibility 0s linear 0.4s, z-index 0s linear 0.4s;
+    -o-transition: opacity 0.3s ease-out 0s, visibility 0s linear 0.4s, z-index 0s linear 0.4s;
+    transition: opacity 0.3s ease-out 0s, visibility 0s linear 0.4s, z-index 0s linear 0.4s;
+}
+
+.reel-viewer.active {
+    visibility: visible;
+    opacity: 1;
+    z-index: 2;
+    pointer-events: auto;
+    background: rgba(0,0,0,0.5);
+    -webkit-transition: opacity 0.3s ease-out 0.1s, visibility 0s linear 0s, z-index 0s linear 0s;
+    -moz-transition: opacity 0.3s ease-out 0.1s, visibility 0s linear 0s, z-index 0s linear 0s;
+    -o-transition: opacity 0.3s ease-out 0.1s, visibility 0s linear 0s, z-index 0s linear 0s;
+    transition: opacity 0.3s ease-out 0.1s, visibility 0s linear 0s, z-index 0s linear 0s;
+}
+
+.reel-viewer .media {
+    position: absolute;
+    width: 64.5rem;
+    max-width: 95%;
+    max-height: 95%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.media .media-control {
+    width: 100%;
+    height: 1.6rem;
+}
+
+.media .media-control .reel-viewer-close{
+    width: 1.6rem;
+    height: 1.6rem;
+    float: right;
+    cursor: pointer;
+    background: url("/libs/shadowbox/close.png");
+}
+
+#mainContainer {
+    width: 64.5rem;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#header {
+    width: 100%;
+    text-align: left;
+    height: 8rem;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+
+#content {
+    width: 100%;
+    min-height: calc(100% - 8rem);
+    background: #ffffff;
+    padding-bottom: 1.5rem;
+    -webkit-box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.12);
+    -moz-box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.12);
+    box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.12);
+}
+
+#sb-loading-inner {
+    font-family: 'Titillium Web', sans-serif !important;
+    font-weight: 400 !important;
+}

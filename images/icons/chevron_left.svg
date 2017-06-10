@@ -1,0 +1,10 @@
+<svg width="15" height="24" viewBox="0 0 15 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="Canvas">
+        <g id="chevronLeft">
+            <use xlink:href="#pathChevronLeft" fill="#333333" />
+        </g>
+    </g>
+    <defs>
+        <path id="pathChevronLeft" fill-rule="evenodd" d="M 14.82 2.82L 12 0L 0 12L 12 24L 14.82 21.18L 5.66 12L 14.82 2.82Z" />
+    </defs>
+</svg>
