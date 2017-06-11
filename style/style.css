@@ -384,15 +384,27 @@ a.no-effect:hover {
     font-weight: 400 !important;
 }
 
+@media only screen and (max-width: 950px) {
+    #planet {
+        display: none;
+    }
+    #rocket {
+        display: none;
+    }
+    #planetMobile {
+        display: block;
+    }
+}
+
 @media only screen and (max-width: 700px) {
     .image-gallery .image-thumbnail {
-        width: 13rem !important;
-        height: 13rem !important;
-        margin: 0.2rem !important;
+        width: 20rem;
+        height: 20rem;
+        margin: 0.5rem;
     }
     .image-gallery .image-thumbnail img {
-        width: 12.8rem !important;
-        height: 12.8rem !important;
+        width: 19.8rem;
+        height: 19.8rem;
     }
     .my-name {
         font-size: 3rem;
@@ -425,14 +437,14 @@ a.no-effect:hover {
     }
 }
 
-@media only screen and (max-width: 950px) {
-    #planet {
-        display: none;
+@media only screen and (max-width: 500px) {
+    .image-gallery .image-thumbnail {
+        width: 13rem;
+        height: 13rem;
+        margin: 0.2rem;
     }
-    #rocket {
-        display: none;
-    }
-    #planetMobile {
-        display: block;
+    .image-gallery .image-thumbnail img {
+        width: 12.8rem;
+        height: 12.8rem;
     }
 }
