@@ -145,30 +145,31 @@ a.no-effect:hover {
     height: 3.2rem;
     background-repeat: no-repeat;
     background-position: center;
+    background-size: contain;
 }
 
 .icon.play {
-    background: url("/images/icons/play.svg");
+    background-image: url("/images/icons/play.svg");
 }
 
 .icon.document {
-    background: url("/images/icons/document.svg");
+    background-image: url("/images/icons/document.svg");
 }
 
 .icon.mail {
-    background: url("/images/icons/mail.svg");
+    background-image: url("/images/icons/mail.svg");
 }
 
 .icon.github {
-    background: url("/images/icons/github.svg");
+    background-image: url("/images/icons/github.svg");
 }
 
 .icon.instagram {
-    background: url("/images/icons/instagram.svg");
+    background-image: url("/images/icons/instagram.svg");
 }
 
 .icon.linkedin {
-    background: url("/images/icons/linkedin.svg");
+    background-image: url("/images/icons/linkedin.svg");
 }
 
 .button .label {
@@ -318,13 +319,35 @@ a.no-effect:hover {
 
 #planet {
     top: 8rem;
-    left: 1rem;
+    left: 50%;
+    transform: translate(-70rem, 0px);
+}
+
+#planetMobile {
+    position: relative;
+    top: auto;
+    left: auto;
+    display: none;
+    text-align: center;
+}
+
+#planetMobile .ascii-art-wrapper {
+    width: 41rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#planetMobile pre {
+    text-align: left;
+    font-size: 0.1rem;
+    overflow: hidden;
+    width: 100%
 }
 
 #rocket {
     bottom: 1rem;
-    right: 50%;
-    transform: translate(50rem, 0px);
+    left: 50%;
+    transform: translate(35rem, 0px);
 }
 
 #mainContainer {
@@ -363,18 +386,53 @@ a.no-effect:hover {
 
 @media only screen and (max-width: 700px) {
     .image-gallery .image-thumbnail {
-        width: 15rem !important;
-        height: 15rem !important;
-        margin: 0.3rem !important;
+        width: 13rem !important;
+        height: 13rem !important;
+        margin: 0.2rem !important;
     }
     .image-gallery .image-thumbnail img {
-        width: 14.8rem !important;
-        height: 14.8rem !important;
+        width: 12.8rem !important;
+        height: 12.8rem !important;
+    }
+    .my-name {
+        font-size: 3rem;
+    }
+    .text-container {
+        font-size: 1.3rem;
+    }
+    .button {
+        height: 4rem;
+        border: 1px solid #333333;
+        padding: 1rem;
+        margin-bottom: 1.5rem;
+        cursor: pointer;
+    }
+    .button .icon {
+        width: 2.4rem;
+        height: 2.4rem;
+    }
+    .button .label {
+        font-size: 2rem;
+        margin-left: 1rem;
     }
     #header {
         padding-left: 1.5rem;
     }
-    .my-name {
-        font-size: 3rem;
+    #content {
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+    }
+}
+
+@media only screen and (max-width: 950px) {
+    #planet {
+        display: none;
+    }
+    #rocket {
+        display: none;
+    }
+    #planetMobile {
+        display: block;
     }
 }
