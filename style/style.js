@@ -1,5 +1,3 @@
-Shadowbox.init();
-
 function closeReelViewers() {
     $(".reel-viewer").each(function() {
         var el = $(this);

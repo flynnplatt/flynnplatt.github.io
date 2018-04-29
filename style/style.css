@@ -44,17 +44,13 @@ a {
     transition: color 0.2s ease-out 0s;
 }
 
-a.active {
+a.page-link.active {
     font-weight: 700;
     color: #EB5757;
 }
 
-a:hover {
+a.page-link:hover {
     color: #EB5757;
-}
-
-a.no-effect:hover {
-    color: #333333;
 }
 
 .text-container {
@@ -178,7 +174,7 @@ a.no-effect:hover {
 }
 
 .image-gallery {
-    padding: 0px 15px;
+    padding: 0px 10px;
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
@@ -397,14 +393,17 @@ a.no-effect:hover {
 }
 
 @media only screen and (max-width: 700px) {
+    .image-gallery {
+        justify-content: left;
+    }
     .image-gallery .image-thumbnail {
-        width: 20rem;
-        height: 20rem;
+        width: 10rem;
+        height: 10rem;
         margin: 0.5rem;
     }
     .image-gallery .image-thumbnail img {
-        width: 19.8rem;
-        height: 19.8rem;
+        width: 9.8rem;
+        height: 9.8rem;
     }
     .my-name {
         font-size: 3rem;
@@ -437,7 +436,7 @@ a.no-effect:hover {
     }
 }
 
-@media only screen and (max-width: 500px) {
+/* @media only screen and (max-width: 500px) {
     .image-gallery .image-thumbnail {
         width: 13rem;
         height: 13rem;
@@ -447,4 +446,4 @@ a.no-effect:hover {
         width: 12.8rem;
         height: 12.8rem;
     }
-}
+} */
