@@ -37,15 +37,19 @@
                         </a>
                     </div>
                 </div>
-                <div class="media-buttons">
-                    <div id="videoGallery" class="button" data-iframe="true" data-src="https://player.vimeo.com/video/280987234">
+                <div id="videoGallery" class="media-buttons">
+                    <div class="button video-gallery-item" data-iframe="true" data-src="https://player.vimeo.com/video/280987234">
                         <div class="icon play"></div>
-                        <div class="label">Play Reel</div>
+                        <div class="label">Theatrical Reel</div>
+                    </div>
+                    <div class="button video-gallery-item" data-iframe="true" data-src="https://player.vimeo.com/video/281000994">
+                        <div class="icon play"></div>
+                        <div class="label">VO Demo</div>
                     </div>
                     <a href="https://drive.google.com/open?id=1AVxEQs4lmhVQV4HZELFO1EkhiZrqAKlz" target="_blank">
                         <div class="button">
                             <div class="icon document"></div>
-                            <div class="label">View Resume</div>
+                            <div class="label">Acting Resume</div>
                         </div>
                     </a>
                 </div>
@@ -66,7 +70,7 @@
     <script type="text/javascript" src="libs/lightgallery/js/lightgallery.min.js"></script>
     <script type="text/javascript">
         lightGallery(document.getElementById("videoGallery"), {
-            selector: "this",
+            selector: ".video-gallery-item",
             iframeMaxWidth: "85%",
             download: false,
             counter: false
