@@ -1,0 +1,9 @@
+version: "2"
+
+services:
+  flynnplatt-website:
+    image: nginx:1.10.2
+    ports:
+      - "8080:80"
+    volumes:
+      - ./:/usr/share/nginx/html
