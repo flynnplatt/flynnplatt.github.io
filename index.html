@@ -38,7 +38,7 @@
                     </div>
                 </div>
                 <div class="media-buttons">
-                    <div class="button reel-trigger" rel="thetrical-reel">
+                    <div id="videoGallery" class="button" data-iframe="true" data-src="https://player.vimeo.com/video/221037111">
                         <div class="icon play"></div>
                         <div class="label">Play Reel</div>
                     </div>
@@ -49,52 +49,29 @@
                         </div>
                     </a>
                 </div>
-                <div id="lightgallery" class="image-gallery">
-                    <a href="/images/headshots/FPlatt_6005.jpg">
-                        <div class="image-thumbnail large">
-                            <img src="/images/headshots/FPlatt_6005_SQUARE.jpg" alt="headshot">
-                        </div>
-                    </a>
-                    <a href="/images/headshots/FPlatt_3039.jpg">
-                        <div class="image-thumbnail large">
-                            <img src="/images/headshots/FPlatt_3039_SQUARE.jpg" alt="headshot">
-                        </div>
-                    </a>
-                    <a href="/images/headshots/FPlatt_3018.jpg">
-                        <div class="image-thumbnail">
-                            <img src="/images/headshots/FPlatt_3018_SQUARE.jpg" alt="headshot">
-                        </div>
-                    </a>
-                    <a href="/images/headshots/FPlatt_6052.jpg">
-                        <div class="image-thumbnail">
-                            <img src="/images/headshots/FPlatt_6052_SQUARE.jpg" alt="headshot">
-                        </div>
-                    </a>
-                    <a href="/images/headshots/FPlatt_7048.jpg">
-                        <div class="image-thumbnail">
-                            <img src="/images/headshots/FPlatt_7048_SQUARE.jpg" alt="headshot">
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div id="thetrical-reel" class="reel-viewer" rel="https://player.vimeo.com/video/221037111">
-            <div class="media">
-                <div class="embed-container">
-                    <iframe src="" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-                </div>
-                <div class="media-control">
-                    <span class="reel-viewer-close close-btn">
-                        <div class="close-label">close</div>
-                    </span>
+                <div id="imageGallery" class="image-gallery">
+                    <img src="/images/headshots/FPlatt_6005_SQUARE.jpg" href="/images/headshots/FPlatt_6005.jpg" alt="headshot" class="image-thumbnail large">
+                    <img src="/images/headshots/FPlatt_7048_SQUARE.jpg" href="/images/headshots/FPlatt_7048.jpg" alt="headshot" class="image-thumbnail large">
+                    <img src="/images/headshots/FPlatt_3039_SQUARE.jpg" href="/images/headshots/FPlatt_3039.jpg" alt="headshot" class="image-thumbnail">
+                    <img src="/images/headshots/FPlatt_3018_SQUARE.jpg" href="/images/headshots/FPlatt_3018.jpg" alt="headshot" class="image-thumbnail">
+                    <img src="/images/headshots/FPlatt_6052_SQUARE.jpg" href="/images/headshots/FPlatt_6052.jpg" alt="headshot" class="image-thumbnail">
                 </div>
             </div>
         </div>
     </div>
 
-    <script type="text/javascript" src="libs/jquery/jquery.js"></script>
     <script type="text/javascript" src="libs/lightgallery/js/lightgallery.min.js"></script>
-    <script type="text/javascript" src="style/style.js"></script>
+    <script type="text/javascript">
+        lightGallery(document.getElementById("videoGallery"), {
+            selector: "this",
+            iframeMaxWidth: "85%",
+            download: false,
+            counter: false
+        });
+        lightGallery(document.getElementById("imageGallery"), {
+            mode: "lg-fade"
+        });
+    </script>
 </body>
 
 </html>

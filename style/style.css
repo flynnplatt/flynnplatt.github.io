@@ -176,128 +176,29 @@ a.page-link:hover {
   position: relative;
 }
 
+.gallery-row {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
 .image-thumbnail {
+  flex: calc(33.33% - 4px);
+  max-width: calc(33.33% - 4px);
+  align-self: center;
   border: 1px solid #333333;
-  width: 20rem;
-  height: 20rem;
-  margin-bottom: 0.75rem;
+  cursor: pointer;
+  margin: 3px 0px;
 }
 
 .image-thumbnail.large {
-  width: 30rem;
-  height: 30rem;
+  flex: calc(50% - 4px);
+  max-width: calc(50% - 4px);
 }
 
-.image-thumbnail img {
-  width: 19.8rem;
-  height: 19.8rem;
-}
-
-.image-thumbnail.large img {
-  width: 29.8rem;
-  height: 29.8rem;
-}
-
-.close-btn,
-.loading {
-  padding: 0.3rem;
-  border: 1px solid #333333;
-  z-index: 1;
-}
-
-.loading {
-  border: none;
-}
-
-.close-btn {
-  cursor: pointer;
-  background: #f6f6f6;
-}
-
-.close-btn .close-label,
-.loading .loading-label {
-  height: 1.8rem;
-  font-size: 1.8rem;
-  line-height: 1.8rem;
-  color: #333333;
-  text-transform: capitalize;
-}
-
-.reel-viewer {
-  position: fixed;
-  top: 0px;
-  left: 0px;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  pointer-events: none;
-  visibility: none;
-  opacity: 0;
-  -webkit-transition: opacity 0.3s ease-out 0s, visibility 0s linear 0.4s,
-    z-index 0s linear 0.4s;
-  -moz-transition: opacity 0.3s ease-out 0s, visibility 0s linear 0.4s,
-    z-index 0s linear 0.4s;
-  -o-transition: opacity 0.3s ease-out 0s, visibility 0s linear 0.4s,
-    z-index 0s linear 0.4s;
-  transition: opacity 0.3s ease-out 0s, visibility 0s linear 0.4s,
-    z-index 0s linear 0.4s;
-}
-
-.reel-viewer.active {
-  visibility: visible;
-  opacity: 1;
-  z-index: 2;
-  pointer-events: auto;
-  background: rgba(0, 0, 0, 0.5);
-  -webkit-transition: opacity 0.3s ease-out 0.1s, visibility 0s linear 0s,
-    z-index 0s linear 0s;
-  -moz-transition: opacity 0.3s ease-out 0.1s, visibility 0s linear 0s,
-    z-index 0s linear 0s;
-  -o-transition: opacity 0.3s ease-out 0.1s, visibility 0s linear 0s,
-    z-index 0s linear 0s;
-  transition: opacity 0.3s ease-out 0.1s, visibility 0s linear 0s,
-    z-index 0s linear 0s;
-}
-
-.reel-viewer .media {
-  position: absolute;
-  width: 100%;
-  height: auto;
-  max-width: 64.5rem;
-  top: 50%;
-  left: 50%;
-  padding: 0px 1rem;
-  transform: translate(-50%, -50%);
-}
-
-.embed-container {
-  position: relative;
-  padding-bottom: 56.25%;
-  height: 0;
-  overflow: hidden;
+.image-thumbnail.wide {
+  flex: 100%;
   max-width: 100%;
-  height: auto;
-}
-
-.embed-container iframe,
-.embed-container object,
-.embed-container embed {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.media .media-control {
-  width: 100%;
-  height: 2.6rem;
-  margin-top: 0.3rem;
-}
-
-.media .media-control .reel-viewer-close {
-  float: right;
-  cursor: pointer;
 }
 
 .contact-link {
@@ -347,16 +248,22 @@ a.page-link:hover {
 }
 
 #planetMobile .ascii-art-wrapper {
-  width: 41rem;
+  width: 44rem;
+  height: 44rem;
+  max-width: 100%;
   margin-left: auto;
   margin-right: auto;
+  position: relative;
 }
 
 #planetMobile pre {
   text-align: left;
   font-size: 0.1rem;
   overflow: hidden;
-  width: 100%;
+  position: absolute;
+  left: 50%;
+  top: 0px;
+  transform: translate(-50%, 0px);
 }
 
 #rocket {
@@ -367,7 +274,6 @@ a.page-link:hover {
 
 #content {
   width: 100%;
-  /* min-height: 100vh; */
   position: relative;
   text-align: center;
 }
@@ -417,13 +323,10 @@ a.page-link:hover {
 }
 
 @media only screen and (max-width: 700px) {
-  .image-gallery .image-thumbnail {
-    width: 10rem;
-    height: 10rem;
-  }
-  .image-gallery .image-thumbnail img {
-    width: 9.8rem;
-    height: 9.8rem;
+  .image-gallery .image-thumbnail,
+  .image-gallery .image-thumbnail.large {
+    flex: calc(33.33% - 4px);
+    max-width: calc(33.33% - 4px);
   }
   .my-name {
     font-size: 3rem;
