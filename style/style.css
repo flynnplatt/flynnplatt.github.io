@@ -221,6 +221,15 @@ a.page-link:hover {
   margin-left: 1rem;
 }
 
+.contact-reps {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.contact-group {
+  flex: 1 1;
+}
+
 .ascii-art {
   position: absolute;
   z-index: 0;
